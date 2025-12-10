@@ -220,5 +220,19 @@
                 snowContainer.appendChild(flake);
             }
             </script>
+        <script>
+            // Fonction pour remplacer les true par 1
+            function fixTrueValues(layerJson) {
+                layerJson.features.forEach(feature => {
+                    for (let key in feature.properties) {
+                        if (feature.properties[key] === "true") {
+                            feature.properties[key] = 1;
+                        }
+                    }
+                });
+            }
+            // Appliquer sur toutes les couches concernées
+            fixTrueValues (json_Dermatologues_16);
+        
     </body>
 </html>

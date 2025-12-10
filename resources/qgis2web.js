@@ -164,8 +164,17 @@ function createPopupField(currentFeature, currentFeatureKeys, layer) {
                     continue;
                 }
             }
-            if (layer.get('fieldLabels')[currentFeatureKeys[i]] == "header label - always visible" ||
-                layer.get('fieldLabels')[currentFeatureKeys[i]] == "header label - visible with data") {
+            if (layer.get('fieldLabels')[currentFeatureKeys[i]] == "ExternalResource") {
+                var fieldValue = currentFeature.get(currentFeatureKeys[i]);
+                // Correction true en 1 pour champs "Nombre de"
+                if (fieldValue === "true" && currentFeatureKeys[i].startsWith("Nombre de")) {
+                    fieldValue = 1;
+                }
+                popupField += (fieldValue != null ? autolinker.link(fieldValue.toLocaleString()) + '</td>' : '');
+            } else {
+                var fieldValue = currentFeature.get(currentFeatureKeys[i]);
+            }
+            if (layer.get('fieldLabels')[currentFeatureKeys[i]] == "header label - visible with data") {
                 popupField += '<strong>' + layer.get('fieldAliases')[currentFeatureKeys[i]] + '</strong><br />';
             }
             if (layer.get('fieldImages')[currentFeatureKeys[i]] != "ExternalResource") {
