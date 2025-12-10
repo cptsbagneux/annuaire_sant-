@@ -67,6 +67,17 @@ map.getView().setProperties({constrainResolution: true});
 var container = document.getElementById('popup');
 var content = document.getElementById('popup-content');
 var closer = document.getElementById('popup-closer');
+let mouseInPopup = false;
+let lastFeatureHovered = null;
+container.addEventListener('mouseenter', function(){
+    mouseInPopup = true;
+});
+container.addEventListener('mouseleave', function(){
+    mouseInPopup = false;
+    if (!lastFeatureHovered){
+        overlayPopup.setPosition(undefined);
+    }
+});
 var sketch;
 
 function stopMediaInPopup() {
@@ -307,9 +318,11 @@ function onPointerMove(evt) {
 			content.innerHTML = popupText;
             container.style.display = 'block';
             overlayPopup.setPosition(coord);
-        } else {
+            lastFeatureHovered = currentFeature;
+        } else if (!mouseInPopup) {
             container.style.display = 'none';
             closer.blur();
+            lastFeatureHovered = null;
         }
     }
 };

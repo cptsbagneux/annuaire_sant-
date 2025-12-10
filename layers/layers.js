@@ -24,6 +24,7 @@ var lyr_CommunedeBagneux_1 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_CommunedeBagneux_1, 
                 style: style_CommunedeBagneux_1,
+                visible: true,
                 popuplayertitle: 'Commune de Bagneux',
                 interactive: false,
                 title: '<img src="styles/legend/CommunedeBagneux_1.png" /> Commune de Bagneux'
@@ -39,6 +40,7 @@ var lyr_Ergothrapeutes_2 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_Ergothrapeutes_2, 
                 style: style_Ergothrapeutes_2,
+                visible: false,
                 popuplayertitle: 'Ergothérapeutes',
                 interactive: true,
                 title: '<img src="styles/legend/Ergothrapeutes_2.png" /> Ergothérapeutes'
@@ -54,6 +56,7 @@ var lyr_Ditticiens_3 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_Ditticiens_3, 
                 style: style_Ditticiens_3,
+                visible: false,
                 popuplayertitle: 'Diététiciens',
                 interactive: true,
                 title: '<img src="styles/legend/Ditticiens_3.png" /> Diététiciens'
@@ -69,6 +72,7 @@ var lyr_Pdicurespodologues_4 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_Pdicurespodologues_4, 
                 style: style_Pdicurespodologues_4,
+                visible: false,
                 popuplayertitle: 'Pédicures-podologues',
                 interactive: true,
     title: 'Pédicures-podologues<br />\
@@ -85,6 +89,7 @@ var lyr_Psychologues_5 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_Psychologues_5, 
                 style: style_Psychologues_5,
+                visible: false,
                 popuplayertitle: 'Psychologues',
                 interactive: true,
     title: 'Psychologues<br />\
@@ -102,6 +107,7 @@ var lyr_Orthophonistes_6 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_Orthophonistes_6, 
                 style: style_Orthophonistes_6,
+                visible: false,
                 popuplayertitle: 'Orthophonistes',
                 interactive: true,
     title: 'Orthophonistes<br />\
@@ -119,6 +125,7 @@ var lyr_Infirmiers_7 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_Infirmiers_7, 
                 style: style_Infirmiers_7,
+                visible: false,
                 popuplayertitle: 'Infirmiers',
                 interactive: true,
     title: 'Infirmiers<br />\
@@ -140,6 +147,7 @@ var lyr_Ostopathes_8 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_Ostopathes_8, 
                 style: style_Ostopathes_8,
+                visible: false,
                 popuplayertitle: 'Ostéopathes',
                 interactive: true,
                 title: '<img src="styles/legend/Ostopathes_8.png" /> Ostéopathes'
@@ -155,6 +163,7 @@ var lyr_Masseurskinsithrapeutes_9 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_Masseurskinsithrapeutes_9, 
                 style: style_Masseurskinsithrapeutes_9,
+                visible: false,
                 popuplayertitle: 'Masseurs-kinésithérapeutes',
                 interactive: true,
     title: 'Masseurs-kinésithérapeutes<br />\
@@ -172,6 +181,7 @@ var lyr_Chirurgiensdentistes_10 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_Chirurgiensdentistes_10, 
                 style: style_Chirurgiensdentistes_10,
+                visible: false,
                 popuplayertitle: 'Chirurgiens-dentistes',
                 interactive: true,
     title: 'Chirurgiens-dentistes<br />\
@@ -190,6 +200,7 @@ var lyr_Traumatologue_11 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_Traumatologue_11, 
                 style: style_Traumatologue_11,
+                visible: false,
                 popuplayertitle: 'Traumatologue',
                 interactive: true,
                 title: '<img src="styles/legend/Traumatologue_11.png" /> Traumatologue'
@@ -205,6 +216,7 @@ var lyr_Echographiste_12 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_Echographiste_12, 
                 style: style_Echographiste_12,
+                visible: false,
                 popuplayertitle: 'Echographiste',
                 interactive: true,
                 title: '<img src="styles/legend/Echographiste_12.png" /> Echographiste'
@@ -220,6 +232,7 @@ var lyr_Radiologue_13 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_Radiologue_13, 
                 style: style_Radiologue_13,
+                visible: false,
                 popuplayertitle: 'Radiologue',
                 interactive: true,
                 title: '<img src="styles/legend/Radiologue_13.png" /> Radiologue'
@@ -235,6 +248,7 @@ var lyr_Ophtalmologues_14 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_Ophtalmologues_14, 
                 style: style_Ophtalmologues_14,
+                visible: false,
                 popuplayertitle: 'Ophtalmologues',
                 interactive: true,
     title: 'Ophtalmologues<br />\
@@ -251,6 +265,7 @@ var lyr_Gyncologues_15 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_Gyncologues_15, 
                 style: style_Gyncologues_15,
+                visible: false,
                 popuplayertitle: 'Gynécologues',
                 interactive: true,
     title: 'Gynécologues<br />\
@@ -267,6 +282,7 @@ var lyr_Dermatologues_16 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_Dermatologues_16, 
                 style: style_Dermatologues_16,
+                visible: false,
                 popuplayertitle: 'Dermatologues',
                 interactive: true,
                 title: '<img src="styles/legend/Dermatologues_16.png" /> Dermatologues'
@@ -282,6 +298,7 @@ var lyr_Cardiologues_17 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_Cardiologues_17, 
                 style: style_Cardiologues_17,
+                visible: false,
                 popuplayertitle: 'Cardiologues',
                 interactive: true,
                 title: '<img src="styles/legend/Cardiologues_17.png" /> Cardiologues'
@@ -297,6 +314,7 @@ var lyr_Mdecinsgnralistes_18 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_Mdecinsgnralistes_18, 
                 style: style_Mdecinsgnralistes_18,
+                visible: true,
                 popuplayertitle: 'Médecins généralistes',
                 interactive: true,
     title: 'Médecins généralistes<br />\
@@ -315,6 +333,7 @@ var lyr_CentreMunicipaldeSantCMS_19 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_CentreMunicipaldeSantCMS_19, 
                 style: style_CentreMunicipaldeSantCMS_19,
+                visible: true,
                 popuplayertitle: 'Centre Municipal de Santé (CMS)',
                 interactive: true,
                 title: '<img src="styles/legend/CentreMunicipaldeSantCMS_19.png" /> Centre Municipal de Santé (CMS)'
@@ -330,12 +349,13 @@ var lyr_Pharmacies_20 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_Pharmacies_20, 
                 style: style_Pharmacies_20,
+                visible: true,
                 popuplayertitle: 'Pharmacies',
                 interactive: true,
                 title: '<img src="styles/legend/Pharmacies_20.png" /> Pharmacies'
             });
 
-lyr_GoogleMaps_0.setVisible(true);lyr_CommunedeBagneux_1.setVisible(true);lyr_Ergothrapeutes_2.setVisible(true);lyr_Ditticiens_3.setVisible(true);lyr_Pdicurespodologues_4.setVisible(true);lyr_Psychologues_5.setVisible(true);lyr_Orthophonistes_6.setVisible(true);lyr_Infirmiers_7.setVisible(true);lyr_Ostopathes_8.setVisible(true);lyr_Masseurskinsithrapeutes_9.setVisible(true);lyr_Chirurgiensdentistes_10.setVisible(true);lyr_Traumatologue_11.setVisible(true);lyr_Echographiste_12.setVisible(true);lyr_Radiologue_13.setVisible(true);lyr_Ophtalmologues_14.setVisible(true);lyr_Gyncologues_15.setVisible(true);lyr_Dermatologues_16.setVisible(true);lyr_Cardiologues_17.setVisible(true);lyr_Mdecinsgnralistes_18.setVisible(true);lyr_CentreMunicipaldeSantCMS_19.setVisible(true);lyr_Pharmacies_20.setVisible(true);
+lyr_GoogleMaps_0.setVisible(true);lyr_CommunedeBagneux_1.setVisible(true);lyr_Ergothrapeutes_2.setVisible(false);lyr_Ditticiens_3.setVisible(false);lyr_Pdicurespodologues_4.setVisible(false);lyr_Psychologues_5.setVisible(false);lyr_Orthophonistes_6.setVisible(false);lyr_Infirmiers_7.setVisible(false);lyr_Ostopathes_8.setVisible(false);lyr_Masseurskinsithrapeutes_9.setVisible(false);lyr_Chirurgiensdentistes_10.setVisible(false);lyr_Traumatologue_11.setVisible(false);lyr_Echographiste_12.setVisible(false);lyr_Radiologue_13.setVisible(false);lyr_Ophtalmologues_14.setVisible(false);lyr_Gyncologues_15.setVisible(false);lyr_Dermatologues_16.setVisible(false);lyr_Cardiologues_17.setVisible(false);lyr_Mdecinsgnralistes_18.setVisible(true);lyr_CentreMunicipaldeSantCMS_19.setVisible(true);lyr_Pharmacies_20.setVisible(true);
 var layersList = [lyr_GoogleMaps_0,lyr_CommunedeBagneux_1,lyr_Ergothrapeutes_2,lyr_Ditticiens_3,lyr_Pdicurespodologues_4,lyr_Psychologues_5,lyr_Orthophonistes_6,lyr_Infirmiers_7,lyr_Ostopathes_8,lyr_Masseurskinsithrapeutes_9,lyr_Chirurgiensdentistes_10,lyr_Traumatologue_11,lyr_Echographiste_12,lyr_Radiologue_13,lyr_Ophtalmologues_14,lyr_Gyncologues_15,lyr_Dermatologues_16,lyr_Cardiologues_17,lyr_Mdecinsgnralistes_18,lyr_CentreMunicipaldeSantCMS_19,lyr_Pharmacies_20];
 lyr_CommunedeBagneux_1.set('fieldAliases', {'dep': 'dep', 'insee_com': 'insee_com', 'nom_com': 'nom_com', 'iris': 'iris', 'code_iris': 'code_iris', 'nom_iris': 'nom_iris', 'typ_iris': 'typ_iris', 'POP65P': 'POP65P', 'part pop65': 'part pop65', });
 lyr_Ergothrapeutes_2.set('fieldAliases', {'Code Insee': 'Code Insee', 'Commune': 'Commune', 'Structure': 'Structure', 'Nombre d\'ergothérapeutes': 'Nombre d\'ergothérapeutes', 'Adresse': 'Adresse', 'Plus d\'informations :': 'Plus d\'informations :', 'Latitude': 'Latitude', 'Longitude': 'Longitude', });
