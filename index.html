@@ -113,7 +113,9 @@
             background-color: white;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
             padding: 5px 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 2);
             position: fixed;
@@ -130,15 +132,17 @@
         }
         #top-banner .back-button a {
             text-decoration: none;
-            color: #333;
-            padding: 8px 12px;
+            color: white;
+            background-color: #007bff;
+            padding: 6px 12px;
             border: 1px solid #333;
             border-radius: 4px;
             transition: 0.3s;
+            margin-left: 10px;
+            white-space: nowrap;
         }
         #top-banner .back-button a:hover {
-            background-color: #333;
-            color: white;
+            background-color: #0056b3;
         }
         #snow {
             position: absolute;
