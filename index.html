@@ -37,6 +37,7 @@
 
         <style>
         html, body, #map {
+            position: relative;
             width: 100%;
             height: 100%;
             padding: 0;
@@ -105,6 +106,29 @@
             margin: 10px auto 15px auto;
             display: block;
         }
+        #snow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        .snowflake {
+            position: absolute;
+            top: -20px;
+            color: white;
+            pointer-events: none;
+            font-size: 12px;
+            animation-name: fall;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes fall {
+            from { transform : translateY(-10px); }
+            to { transform : translateY(110vh); }
+        }
         </style>
         <title></title>
     </head>
@@ -118,7 +142,9 @@
                 <button id="enter-map">Accéder à la carte</button>
                 </div>
                 </div>
-        <div id="map" class="map"></div>
+        <div id="map" class="map">
+        <div id="snow"></div>
+        </div>
         <button id="info-button">Informations</button>
         <div id="info-panel">
             <strong>À propos de la carte :</strong><br><br>
@@ -171,6 +197,20 @@
         <script src="styles/CommunedeBagneux_1_style.js"></script><script src="styles/Ergothrapeutes_2_style.js"></script><script src="styles/Ditticiens_3_style.js"></script><script src="styles/Pdicurespodologues_4_style.js"></script><script src="styles/Psychologues_5_style.js"></script><script src="styles/Orthophonistes_6_style.js"></script><script src="styles/Infirmiers_7_style.js"></script><script src="styles/Ostopathes_8_style.js"></script><script src="styles/Masseurskinsithrapeutes_9_style.js"></script><script src="styles/Chirurgiensdentistes_10_style.js"></script><script src="styles/Traumatologue_11_style.js"></script><script src="styles/Echographiste_12_style.js"></script><script src="styles/Radiologue_13_style.js"></script><script src="styles/Ophtalmologues_14_style.js"></script><script src="styles/Gyncologues_15_style.js"></script><script src="styles/Dermatologues_16_style.js"></script><script src="styles/Cardiologues_17_style.js"></script><script src="styles/Mdecinsgnralistes_18_style.js"></script><script src="styles/CentreMunicipaldeSantCMS_19_style.js"></script><script src="styles/Pharmacies_20_style.js"></script>
         <script src="./layers/layers.js" type="text/javascript"></script> 
         <script src="./resources/Autolinker.min.js"></script>
-        <script src="./resources/qgis2web.js"></script>  
+        <script src="./resources/qgis2web.js"></script>
+        <!-- Effet neige-->
+        <div id="snow"></div>
+        <script>
+            const snowContainer = document.getElementById("snow");
+            for (let i = 0; i < 40; i++) {
+                let flake = document.createElement("div");
+                flake.className = "snowflake";
+                flake.textContent = "❄"
+                flake.style.left = Math.random() * 100 + "vw";
+                flake.style.fontSize = (Math.random() * 12 + 8) + "px";
+                flake.style.animationDuration = (Math.random() * 3 + 2) + "s";
+                snowContainer.appendChild(flake);
+            }
+            </script>
     </body>
 </html>
