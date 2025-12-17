@@ -36,13 +36,17 @@
         </style>
 
         <style>
-        html, body, #map {
+        html, body, {
+           margin: 0;
+           padding: 0;
+           height: 100%;
+        }
+
+        #map {
             position: relative;
             width: 100%;
             height: calc(100vh - 70px);
             margin-top: 70px;
-            padding-top: 10px;
-            margin: 0;
         }
         #info-button {
             position: fixed;
@@ -192,8 +196,16 @@
                 </div>
                 </div>
         <div id="map" class="map">
-        <div id="snow"></div>
-        </div>
+
+    <div id="snow"></div>
+
+    <!-- POPUP DOIT ÊTRE DANS LA MAP -->
+    <div id="popup" class="ol-popup">
+        <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+        <div id="popup-content"></div>
+    </div>
+
+</div>
         <button id="info-button">Informations</button>
         <div id="info-panel">
             <strong>À propos de la carte :</strong><br><br>
@@ -204,10 +216,6 @@
             - Survolez les points pour voir les détails et accéder au site web si disponible.<br><br>
             
             Carte mise à disposition par la CPTS de Bagneux. Données publiques, mises en forme avec QGIS.
-            </div>
-            <div id="popup" class="ol-popup">
-                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
-                <div id="popup-content"></div>
             </div>
         <script src="resources/qgis2web_expressions.js"></script>
         <script>
