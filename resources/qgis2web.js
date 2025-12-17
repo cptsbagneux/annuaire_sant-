@@ -11,8 +11,6 @@ var map = new ol.Map({
     })
 });
 
-var isMobile = ol.has.TOUCH;
-
 //initial view - epsg:3857 coordinates if not "Match project CRS"
 map.getView().fit([646473.918329, 6853979.921728, 652878.828289, 6857129.984806], map.getSize());
 
@@ -142,11 +140,6 @@ var featureOverlay = new ol.layer.Vector({
 
 var doHighlight = false;
 var doHover = true;
-// désactiver doHover et highlight en version mobile
-if (isMobile) {
-    doHover = false;
-    doHighlight = false;
-}
 
 function createPopupField(currentFeature, currentFeatureKeys, layer) {
     var popupText = '';
@@ -343,10 +336,7 @@ function onPointerMove(evt) {
     }
 };
 
-map.on('pointermove', function (evt) {
-    if (isMobile) return; // pas de hover sur mobile
-    onPointerMove(evt);
-});
+map.on('pointermove', onPointerMove);
 
 var popupContent = '';
 var popupCoord = null;
@@ -497,7 +487,6 @@ function onSingleClickWMS(evt) {
 
 map.on('singleclick', onSingleClickFeatures);
 map.on('singleclick', onSingleClickWMS);
-map.on('click', handleFeatureClick);
 
 //get container
 var topLeftContainerDiv = document.getElementById('top-left-container')
